@@ -19,7 +19,11 @@ import './App.css'
 
 class App extends React.Component {
 
+  logout = (e) => {
+    e.preventDefault();
 
+    localStorage.clear()
+  }
 
   render() {
     return (
@@ -30,15 +34,10 @@ class App extends React.Component {
             <nav>
 
                 <NavLink onCLick = {() => this.props.getData()} className = 'navLink' to="/login">Login</NavLink>
-
-
                 <NavLink onCLick = {() => this.props.getData()} className = 'navLink' to="/signup1">Sign Up</NavLink>
-
-
                 <NavLink className = 'navLink' to="/protected/dashboard">Dashboard</NavLink>
-
-
                 <NavLink className = 'navLink' to="/protected/signup3">Update Your Profile</NavLink>
+                <button onCLick = {this.logout}></button>
 
             </nav>
           </div>
