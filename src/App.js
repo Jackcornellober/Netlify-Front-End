@@ -37,7 +37,7 @@ class App extends React.Component {
                 <NavLink onCLick = {() => this.props.getData()} className = 'navLink' to="/signup1">Sign Up</NavLink>
                 <NavLink className = 'navLink' to="/protected/dashboard">Dashboard</NavLink>
                 <NavLink className = 'navLink' to="/protected/signup3">Update Your Profile</NavLink>
-                <button onCLick = {this.logout}></button>
+                <button onCLick = {this.logout}>Log Out</button>
 
             </nav>
           </div>
